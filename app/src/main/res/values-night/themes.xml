@@ -15,7 +15,7 @@
     </style>
 
     <style name="SplashTheme" parent="Theme.IVenta">
-        <item name="android:windowBackground">@drawable/logo_iventa256</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
 </resources>

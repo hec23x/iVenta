@@ -20,15 +20,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         //Splash Screen
-        Thread.sleep(1000)
+        Thread.sleep(2000)
         setTheme(R.style.Theme_IVenta)
 
         super.onCreate(savedInstanceState)
         // binding reemplaza a R.layout.activity_main.
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
 
         val homeFragment    = HomeFragment()
         val cuentasFragment = CuentasFragment()
@@ -47,10 +45,8 @@ class MainActivity : AppCompatActivity() {
             }
             true
 
-
         }
     }
-
 
     private fun setFragmentView(fragment : Fragment = HomeFragment() ){
 
