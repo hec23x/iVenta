@@ -6,17 +6,39 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.losbros.iventa.R
+import com.losbros.iventa.databinding.FragmentBuscarBinding
+import com.losbros.iventa.databinding.FragmentCuentasBinding
 
 
 class CuentasFragment : Fragment() {
 
+    private var _binding: FragmentCuentasBinding? = null
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cuentas, container, false)
+    // binding solo vive entre onCreateView y onDestroyView.
+    private val binding get() = _binding!!
+
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        _binding = FragmentCuentasBinding.inflate(inflater, container, false)
+        return binding.root
     }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        initAplication()
+    }
+
+    private fun initAplication() {
+        TODO("iniciar componentes en este metodo")
+        //variable a utilizar es binding
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 
 }
